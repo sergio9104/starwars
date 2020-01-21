@@ -1,21 +1,20 @@
-<mat-card class="example-card">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Star Wars Episodio IV</mat-card-title>
-      <mat-card-subtitle>Una nueva esperanza (1977)</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="https://img.europapress.es/fotoweb/fotonoticia_20180402130008_420.jpg" alt="Photo of starswars">
-    <mat-card-content>
-      <p>
-        Stars Wars es una película estadounidense de 1977 del subgénero de ciencia ficción space opera,
-        escrita y dirigida por George Lucas; renombrada como Stars Wars: Episode IV - A New Hope en
-        1999. En español se tituló originalmente La guerra de las galaxias y tras ser renombrada se 
-        conoce como Star Wars: Episodio IV - Una nueva esperanza o La guerra de las galaxias: Episodio IV 
-        - Una nueva esperanza. Fue la primera película que se estrenó de la saga Star Wars, y se ordena
-        como la cuarta en términos de su cronología interna.
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-          <button mat-raised-button color="primary">PERSONAJES</button>
-          </mat-card-actions>
-  </mat-card>
+<mat-grid-list cols="4" rowHeight="700px">
+  <mat-grid-tile *ngFor="let movie of movies">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{movie.title}}</mat-card-title>
+        <mat-card-subtitle>{{movie.director}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="/assets/peliculas/{{movie.episode_id}}.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          {{movie.opening_crawl}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary">PERSONAJES</button>
+            </mat-card-actions>
+    </mat-card>  
+  </mat-grid-tile>
+</mat-grid-list>
