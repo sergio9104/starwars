@@ -9,7 +9,9 @@ import { PersonajesComponent } from './personajes/personajes.component';
 import { ListasComponent } from './listas/listas.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {MatCardModule, MatButtonModule, MatGridListModule, MatToolbarModule} from '@angular/material';
+import {MatCardModule, MatButtonModule, MatGridListModule, MatToolbarModule, MatInputModule, MatFormFieldModule} from '@angular/material';
+import { FormsModule } from '@angular/forms';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,10 @@ import {MatCardModule, MatButtonModule, MatGridListModule, MatToolbarModule} fro
     MatButtonModule,
     MatGridListModule,
     MatToolbarModule,
+    MatInputModule,
+    MatFormFieldModule,
+    FormsModule,
+    Ng2SearchPipeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

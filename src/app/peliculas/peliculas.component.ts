@@ -8,7 +8,8 @@ import { MovieService } from '../services/movie.service';
 })
 export class PeliculasComponent implements OnInit {
 
-  public movies: any[] = []
+  public movies: any[] = [];
+  public busqueda:any;
   constructor(
     private api: MovieService
   ) { }

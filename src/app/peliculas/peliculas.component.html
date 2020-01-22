@@ -1,6 +1,14 @@
-<mat-toolbar>Star Wars</mat-toolbar>
+<mat-toolbar>
+  <h2>Star Wars</h2>
+    
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Búsqueda de pelicula" [(ngModel)]="busqueda" value="">
+    </mat-form-field>
+    
+</mat-toolbar>
+
 <mat-grid-list cols="4" rowHeight="700px">
-  <mat-grid-tile *ngFor="let movie of movies">
+  <mat-grid-tile *ngFor="let movie of movies | filter:busqueda ">
     <mat-card class="example-card">
       <mat-card-header>
         <div mat-card-avatar class="example-header-image"></div>
