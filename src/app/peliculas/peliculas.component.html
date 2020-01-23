@@ -13,11 +13,11 @@
         <h2>{{movie.director}} {{movie.release_date | date:'yyyy'}}</h2>
       </div>
       <div class="content">
-        <img [src]="'/assets/peliculas/'+movie.episode_id+'.webp'" width="351" alt="">
+        <img src="/assets/peliculas/{{movie.episode_id}}.webp" width="351" alt="">
         <div class="content-detail">
-          <img [src]="'/assets/titulos/'+movie.episode_id+'.webp'" width="253" alt="">
+          <img src="/assets/titulos/{{movie.episode_id}}.webp" width="253" alt="">
           <p> {{movie.opening_crawl}} </p>
-          <a class="button">
+          <a class="button" routerLink="/personajes/{{movie.episode_id}}">
             <div class="simbol"></div>
             PERSONAJES
           </a>
