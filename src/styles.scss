@@ -2,6 +2,63 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
-background: url("/assets/fondo starwars.png");
+background: url("/assets/fondo.webp");
 background-attachment: fixed;
+}
+
+@font-face {
+    font-family: DIN;
+    font-weight: 400;
+    font-style: normal;
+    src: url("https://static-mh.content.disney.io/starwars/assets/din_light/d1b1e866a41142ba8f721a1572b-95d4188812aa.eot?#iefix") format("embedded-opentype"),url("https://static-mh.content.disney.io/starwars/assets/din_light/d1b1e866a41142ba8f721a1572b-9e434475db85.woff") format("woff"),url("https://static-mh.content.disney.io/starwars/assets/din_light/d1b1e866a41142ba8f721a1572b-f9f9b6094b4b.ttf") format("truetype"),url("https://static-mh.content.disney.io/starwars/assets/din_light/d1b1e866a41142ba8f721a1572b-9d227df25f24.svg#d1b1e866-a411-42ba-8f75-72bf28e23694") format("svg")
+}
+
+@font-face {
+    font-family: DIN;
+    font-weight: 600;
+    font-style: normal;
+    src: url("https://static-mh.content.disney.io/starwars/assets/din_reg/da088ecca53c4831a95b6fd81b2-906f216c018f.eot?#iefix") format("embedded-opentype"),url("https://static-mh.content.disney.io/starwars/assets/din_reg/da088ecca53c4831a95b6fd81b2-e031b4de535a.woff") format("woff"),url("https://static-mh.content.disney.io/starwars/assets/din_reg/da088ecca53c4831a95b6fd81b2-3a0460b3f41b.ttf") format("truetype"),url("https://static-mh.content.disney.io/starwars/assets/din_reg/da088ecca53c4831a95b6fd81b2-61b997f2678f.svg#e3145f65-29b5-4f7f-8c6e-2dc135021b6a") format("svg")
+}
+
+@font-face {
+    font-family: DIN;
+    font-weight: 800;
+    font-style: normal;
+    src: url("https://static-mh.content.disney.io/starwars/assets/din_med/b90b6bdf15e245449fe092c79ff-6cf0f3c6f832.eot?#iefix") format("embedded-opentype"),url("https://static-mh.content.disney.io/starwars/assets/din_med/b90b6bdf15e245449fe092c79ff-75090969b221.woff") format("woff"),url("https://static-mh.content.disney.io/starwars/assets/din_med/b90b6bdf15e245449fe092c79ff-cc3283a08cc2.ttf") format("truetype"),url("https://static-mh.content.disney.io/starwars/assets/din_med/b90b6bdf15e245449fe092c79ff-abc53257b584.svg#b90b6bdf-15e2-4544-9fe0-92c79fff0ecd") format("svg")
+}
+
+@font-face {
+    font-family: DINCond;
+    font-weight: 400;
+    font-style: normal;
+    src: url("https://static-mh.content.disney.io/starwars/assets/dincond_light/c11fd4df941d4a178af0be88e02-466ca08de421.eot?#iefix") format("embedded-opentype"),url("https://static-mh.content.disney.io/starwars/assets/dincond_light/c11fd4df941d4a178af0be88e02-029d817b1881.woff") format("woff"),url("https://static-mh.content.disney.io/starwars/assets/dincond_light/c11fd4df941d4a178af0be88e02-768a0e2ea7ac.ttf") format("truetype"),url("https://static-mh.content.disney.io/starwars/assets/dincond_light/c11fd4df941d4a178af0be88e02-a8ee27f1676f.svg#c11fd4df-941d-4a17-8af0-be88e02e0042") format("svg")
+}
+
+@font-face {
+    font-family: DINCond;
+    font-weight: 600;
+    font-style: normal;
+    src: url("https://static-mh.content.disney.io/starwars/assets/dincond_med/4f311da19ec64379fa962bc1b45-c6e2e32ef272.eot?#iefix") format("embedded-opentype"),url("https://static-mh.content.disney.io/starwars/assets/dincond_med/4f311da19ec64379fa962bc1b45-8a7c81b3069f.woff") format("woff"),url("https://static-mh.content.disney.io/starwars/assets/dincond_med/4f311da19ec64379fa962bc1b45-e44e78570600.ttf") format("truetype"),url("https://static-mh.content.disney.io/starwars/assets/dincond_med/4f311da19ec64379fa962bc1b45-b2b2d5921af2.svg#4f311da1-9ec6-4379-9621-b45be0e23abd") format("svg")
+}
+
+@font-face {
+    font-family: GeoGrotesque;
+    font-weight: 400;
+    font-style: normal;
+    src: url("https://static-mh.content.disney.io/starwars/assets/geo_reg/ae5b8a9caf824542345az4523o5-ddbdc2b6ded4.eot?#iefix") format("embedded-opentype"),url("https://static-mh.content.disney.io/starwars/assets/geo_reg/ae5b8a9caf824542345az4523o5-d2aeb35a1acc.woff") format("woff"),url("https://static-mh.content.disney.io/starwars/assets/geo_reg/ae5b8a9caf824542345az4523o5-50b54d41815e.ttf") format("truetype"),url("https://static-mh.content.disney.io/starwars/assets/geo_reg/ae5b8a9caf824542345az4523o5-f0e98aa674d5.svg#ae5b8a9c-af85-4ddf-a0a6-602405583707") format("svg")
+}
+
+@font-face {
+    font-family: DIN Next W01 Regular;
+    font-weight: 400;
+    font-style: normal;
+    src: url("https://static-mh.content.disney.io/starwars/assets/dinnext_reg/da088ecca53c4831a95b6fd81b5b338a-8a2a0a741793.eot?#iefix") format("embedded-opentype"),url("https://static-mh.content.disney.io/starwars/assets/dinnext_reg/da088ecca53c4831a95b6fd81b5b338a-2e0ebe27d3d5.woff") format("woff"),url("https://static-mh.content.disney.io/starwars/assets/dinnext_reg/da088ecca53c4831a95b6fd81b5b338a-5a9e92ecdad1.ttf") format("truetype"),url("https://static-mh.content.disney.io/starwars/assets/dinnext_reg/da088ecca53c4831a95b6fd81b5b338a-943f07abccb2.svg#da088ecc-a53c-4831-a95b-6fd81b5b338a") format("svg")
+}
+
+body, h1, h2, h3, h4, h5, h6, input, textarea, select {
+    font-family: DIN, Helvetica, Arial, sans-serif;
+    color: #aaa;
+    font-weight: 600;
+    -webkit-text-size-adjust: none;
+    font-size: 16px;
 }
