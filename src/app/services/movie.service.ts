@@ -11,11 +11,15 @@ export class MovieService {
 
   constructor(private http: HttpClient
     ) {
-    this.baseURL = environment.apiurl + 'films/';
+    this.baseURL = environment.apiurl + 'films';
   }
 
   public async getMovies(): Promise<any> {
     return await this.http.get<any>(`${this.baseURL}`).toPromise();
+  }
+
+  public async getMovie(id:any): Promise<any> {
+    return await this.http.get<any>(`${this.baseURL}/${id}`).toPromise();
   }
 
 }

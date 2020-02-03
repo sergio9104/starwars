@@ -1,7 +1,6 @@
 <header class="titulo">
     <img src="/assets/titulo.png" alt="">
   </header>
-  
   <nav>  
       <ul>
         <li >
@@ -17,35 +16,21 @@
   <main>
     <div class="container">
       <div class="search">
-        <input placeholder="BÚSQUEDA"  value="">
+        <input placeholder="BÚSQUEDA" [(ngModel)]="busqueda" value="">
       </div>
     </div>
-    <div class="container" >
+    <div class="container" *ngFor="let character of characters | filter:busqueda ">
       <section class="tile" >
         <div class="title">
-          <h1>pelicula</h1>
-          <h2>director 1990</h2>
+          <h1>{{character.name}}</h1>
+          <h2>{{character.birth_year}}</h2>
         </div>
         <div class="content">
-          
           <div class="content-detail">
-            
-            <p> ffjjrjrrrkkgghhjjkkll;kkjhhhggggffrreeddffffgghhtty </p>
-            <a class="button" (click)="openDialog()">
+            <p> {{character.opening_crawl}} </p>
+            <a class="button" (click)="openDialog(character)">
               <div class="simbol"></div>
               ESPECIES
-            </a>
-            <a class="button">
-              <div class="simbol"></div>
-              NAVES
-            </a>
-            <a class="button">
-              <div class="simbol"></div>
-              VEHICULOS
-            </a>
-            <a class="button">
-              <div class="simbol"></div>
-              PELICULAS
             </a>
           </div>
         </div>

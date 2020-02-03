@@ -1,5 +1,10 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { Component, OnInit } from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
+import { DialogPesonajesComponent } from '../dialog/dialog-pesonajes/dialog-pesonajes.component';
+import { Route } from '@angular/compiler/src/core';
+import { ActivatedRoute } from '@angular/router';
+import { MovieService } from '../services/movie.service';
+import { CharactersService } from '../services/characters.service';
 
 
 @Component({
@@ -9,39 +14,54 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog
 })
 export class PersonajesComponent implements OnInit {
 
-  animal: string;
-  name: string;
+  public movieId:any;
+  public listCharacters: any;
+  public characters: any[] = [];
+  private paramsObservable: any;
 
-  constructor(public dialog: MatDialog) { }
 
-  ngOnInit() {
+  constructor(
+    private dialog: MatDialog,
+    private route: ActivatedRoute,
+    private _movieService: MovieService,
+    private _charactersService: CharactersService
+    ) { 
+
+    this.paramsObservable = this.route.params.subscribe(async (params: any) => {
+      this.movieId = params.id;
+    });
+
   }
-  openDialog(): void {
-    const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
-      width: '250px',
-      data: {name: this.name, animal: this.animal}
+
+  async ngOnInit() {
+    await this._movieService.getMovie(this.movieId).then((response)=> {
+      this.listCharacters = response.characters;
+      this.loadCharacters();
+    });
+  }
+
+  loadCharacters(){
+
+    this.listCharacters.forEach(character => {
+      this._charactersService.getCharacter(character).then((reponse) => {
+        this.characters.push(reponse);
+      });
+    });
+
+    console.log(this.characters);
+
+  }
+
+  openDialog(character): void {
+    const dialogRef = this.dialog.open(DialogPesonajesComponent, {
+      width: '600px',
+      data: character
     });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
-      this.animal = result;
+
     });
-  }
-
-}
-
-@Component({
-  selector: 'modal',
-  templateUrl: 'modal.html',
-})
-export class DialogOverviewExampleDialog {
-
-  constructor(
-    public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
-    @Inject(MAT_DIALOG_DATA) public data) {}
-
-  onNoClick(): void {
-    this.dialogRef.close();
   }
 
 }
