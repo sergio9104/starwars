@@ -4,8 +4,12 @@
   
   <nav>  
       <ul>
+        <li >
+          <a href="/">PELICULAS</a>
+          <span ></span>
+        </li>
         <li class="selected">
-          <a href="">PELICULAS</a>
+          <a href="">PERSONAJES</a>
           <span ></span>
         </li>
       </ul>
@@ -23,13 +27,25 @@
           <h2>director 1990</h2>
         </div>
         <div class="content">
-          <img src="/assets/peliculas/1.webp" width="351" alt="">
+          
           <div class="content-detail">
-            <img src="/assets/titulos/1.webp" width="253" alt="">
+            
             <p> ffjjrjrrrkkgghhjjkkll;kkjhhhggggffrreeddffffgghhtty </p>
-            <a class="button" routerLink="/personajes/1">
+            <a class="button" (click)="openDialog()">
               <div class="simbol"></div>
-              PERSONAJES
+              ESPECIES
+            </a>
+            <a class="button">
+              <div class="simbol"></div>
+              NAVES
+            </a>
+            <a class="button">
+              <div class="simbol"></div>
+              VEHICULOS
+            </a>
+            <a class="button">
+              <div class="simbol"></div>
+              PELICULAS
             </a>
           </div>
         </div>

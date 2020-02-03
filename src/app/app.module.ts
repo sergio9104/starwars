@@ -5,20 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PeliculasComponent } from './peliculas/peliculas.component';
-import { PersonajesComponent } from './personajes/personajes.component';
+import { PersonajesComponent, DialogOverviewExampleDialog } from './personajes/personajes.component';
 import { ListasComponent } from './listas/listas.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatCardModule, MatButtonModule, MatGridListModule, MatToolbarModule, MatInputModule, MatFormFieldModule} from '@angular/material';
 import { FormsModule } from '@angular/forms';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
     AppComponent,
     PeliculasComponent,
     PersonajesComponent,
-    ListasComponent
+    ListasComponent,
+    DialogOverviewExampleDialog,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,17 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     MatFormFieldModule,
     FormsModule,
     Ng2SearchPipeModule,
+    MatDialogModule,
   ],
+    exports: [
+      DialogOverviewExampleDialog,
+
+    ],
+  entryComponents: [
+    DialogOverviewExampleDialog
+  ],
+
+
   providers: [],
   bootstrap: [AppComponent]
 })
