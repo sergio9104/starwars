@@ -1,0 +1,228 @@
+.tile{
+    width: 1200px;
+    background-color: #151515;
+    margin: 0 auto;
+}
+
+nav{
+    background-color: #000;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    border-top: 1px solid #343434;
+    ul{
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        height: 46px;
+        li{
+            list-style: none;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 23px;
+            border-left: 1px solid #333;
+            flex-direction: column;
+            a{
+                text-decoration: none;
+                color: #999;
+                font-family: "DIN Next W01 Regular", Helvetica, Arial, sans-serif;
+                transition: color 100ms;
+                &:hover{
+                    color: #fff;
+                }
+            }
+            &:last-child{
+                border-right: 1px solid #333;
+            }
+        }
+        .selected{
+            a{
+                color: #fff; 
+            }
+            span{
+                background-color: rgb(255, 255, 255);
+                box-shadow: 0 0 6px 2px rgba(237,236,81,0.7);
+                width: 32px;
+                height: 1px;
+            }
+            
+        }
+    }
+}
+
+.search{
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #3a3a3a;
+    height: 69px;
+    padding: 17px 23px 10px 23px;
+    box-sizing: border-box;
+    border-radius: 0 5px 5px 0 ;
+    margin-top: 35px;
+    position: relative;
+    &:after{
+        content: '';
+        position: absolute;
+        left: -4px;
+        top: 0;
+        border-bottom: 4px solid transparent;
+        border-right: 4px solid #3a3a3a;
+        height: 25%;
+        border-radius: 5px 0 0 0;
+        transition: 0.3s;
+    }
+    &:before{
+        content: '';
+        position: absolute;
+        left: -4px;
+        bottom: 0;
+        border-top: 4px solid transparent;
+        border-right: 4px solid #3a3a3a;
+        height: 25%;
+        border-radius: 0 0 0 5px;
+        transition: 0.3s;
+    }
+    input{
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #2c2c2c;
+        width: 100%;
+        font-size: 1.5em;
+        height: 100%;
+        color: darkgrey;
+        &::placeholder {
+            font-size: 32px;
+            color: darkgrey;
+        }
+        &:focus{
+            outline: none;
+        }
+    }
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    img{
+        max-width: 203px;
+    }
+}
+
+p{
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+.title{
+    background-color: #282727;
+    padding: 12px 16px 5px 16px;
+    border-radius: 4px;
+    line-height: 17px;
+    margin: 30px 0 30px 0;
+}
+
+h2{
+    font-family: DIN, Helvetica, Arial, sans-serif;
+    font-weight: 800;
+    font-size: 1em;
+    text-transform: uppercase;
+    margin: 0;
+    color: #666;
+}
+
+h1{
+    font-family: DIN, Helvetica, Arial, sans-serif;
+    font-weight: 800;
+    font-size: 1.2em;
+    color: #ddd;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+main{
+    background: rgba(21, 21, 21, 0.67);
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto 35px auto;
+    background-color: #151515;
+    padding: 1px 0 40px 0;
+}
+
+.content{
+    display: flex;
+    .content-detail{
+        padding: 0 46px;
+    }
+    .button{
+        background-color: #282727;
+        color: #edec51;
+        margin: 56px 20px 10px 0;
+        width: 222px;
+        padding: 24px 50px 20px;
+        font-size: 1.2em;
+        box-sizing: border-box;
+        position: relative;
+        transition: 0.3s;
+        cursor: pointer;
+        display: block;
+        border-radius: 5px 5px 0 0;
+        text-decoration: none;
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            border-right: 6px solid transparent;
+            border-top: 6px solid #282727;
+            width: 50%;
+            border-radius: 0 0 0 5px;
+            transition: 0.3s;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: -6px;
+            border-left: 6px solid transparent;
+            border-top: 6px solid #282727;
+            width: 15%;
+            border-radius: 0 0 5px 0;
+            transition: 0.3s;
+        }
+        &:hover{
+            background-color: #333;
+        }
+        &:hover:after,  &:hover:before{
+            border-top-color: #333;
+        }
+    }
+
+    .simbol{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        &:after{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 47px;
+            height: 47px;
+            opacity: 0.06;
+            z-index: 1;
+            background-image: url(https://static-mh.content.disney.io/starwars/assets/shared/decal-a67af2e7d567.png);
+            background-size: 300% 200%;
+            left: 20px;
+            bottom: -12px;
+            top: -12px;
+            bottom: auto;
+        }
+    }
+}
